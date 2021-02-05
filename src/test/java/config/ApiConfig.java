@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "file:Desktop\\api.properties.txt",
+        "file:~/api.properties",
         "system:properties"
 })
 public interface ApiConfig extends Config {
@@ -13,10 +13,7 @@ public interface ApiConfig extends Config {
     @Key("api.url")
     String apiUrl();
 
-    @DefaultValue("yandex")
-    @Key("api.login")
-    String apiLogin();
-
-    @Key("api.password")
-    String apiPassword();
+    @DefaultValue("123qwe123qwe")
+    @Key("api.token")
+    String apiToken();
 }
